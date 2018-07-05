@@ -45,7 +45,11 @@ class Dog
   end
 
   def self.find_by_id(number)
-    
+    sql = "SELECT * FROM dogs WHERE id = ?"
+
+    DB[:conn].execute(sql, number).map do |row|
+      self.new_from_db(row)
+    end.first
   end
 
 
