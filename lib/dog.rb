@@ -44,6 +44,10 @@ class Dog
     dog
   end
 
+  def self.find_by_id(number)
+    
+  end
+
 
   def update
     sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
