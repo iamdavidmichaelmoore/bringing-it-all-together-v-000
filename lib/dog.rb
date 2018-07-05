@@ -57,6 +57,8 @@ class Dog
     dog
   end
 
+  def self.find_or_create_by(name:, breed:)
+
   def update
     sql = "UPDATE dogs SET name = ?, breed = ? WHERE id = ?"
 
