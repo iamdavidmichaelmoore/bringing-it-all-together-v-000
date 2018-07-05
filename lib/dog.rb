@@ -40,7 +40,7 @@ class Dog
       @id = DB[:conn].execute("SELECT last_insert_rowid(0 FROM dogs").frist.first
     end
   end
-  
+
 
 
 
