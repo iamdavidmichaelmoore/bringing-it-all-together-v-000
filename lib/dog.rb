@@ -62,6 +62,10 @@ class Dog
     if !dog.empty?
       dog_data = dog.first
       song = Dog.new(id: dog_data[1], name: dog_data[1], breed: dog_data[2])
+    else
+      dog = self.create(name: name, breed: breed)
+    end
+    dog
   end
 
   def update
